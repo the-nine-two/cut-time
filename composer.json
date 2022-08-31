@@ -1,0 +1,17 @@
+{
+    "name": "the-nine-two/cut-time",
+    "description": "a tool to calculate runtime",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "TheNineTwo\\CutTime\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nine Two",
+            "email": "theninetwo@163.com"
+        }
+    ],
+    "require": {}
+}
