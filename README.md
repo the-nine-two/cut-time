@@ -4,7 +4,7 @@
 
 ## 全局使用
 
-```php 
+```php
     TheNineTwo\CutTime\CutTime::start('system', false);
     
     sleep(1);
@@ -17,15 +17,59 @@
     
     var_dump($allTotal);
 ```
+结果：
+```text
+array(2) {
+  ["node1"]=>
+  array(2) {
+    ["total_time"]=>
+    int(1005)
+    ["node_time"]=>
+    int(1005)
+  }
+  ["node2"]=>
+  array(2) {
+    ["total_time"]=>
+    int(3007)
+    ["node_time"]=>
+    int(2002)
+  }
+}
+
+```
 
 ## 模块内使用
 
 ```php
     $timeBox = new \TheNineTwo\CutTime\Box();
+    
     sleep(1);
     $timeBox->cut('node1');
-    usleep(200);
+    
+    usleep(2000);
     $timeBox->cut('node2');
+    
     $all = $timeBox->all();
+    
     var_dump($all);
+```
+结果
+```text
+array(2) {
+  ["node1"]=>
+  array(2) {
+    ["total_time"]=>
+    int(1005)
+    ["node_time"]=>
+    int(1005)
+  }
+  ["node2"]=>
+  array(2) {
+    ["total_time"]=>
+    int(1007)
+    ["node_time"]=>
+    int(2)
+  }
+}
+
 ```
