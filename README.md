@@ -7,10 +7,10 @@
 ```php 
     TheNineTwo\CutTime\CutTime::start('system', false);
     
-    sleep 1;
+    sleep(1);
     TheNineTwo\Cuttime\CutTime::cut('system', 'node1');
     
-    sleep 2;
+    sleep(2);
     TheNineTwo\Cuttime\CutTime::cut('system', 'node2');
     
     $allTotal = TheNineTwo\Cuttime\CutTime::all('system');
@@ -22,7 +22,7 @@
 
 ```php
     $timeBox = new \TheNineTwo\CutTime\Box();
-    sleep(1)
+    sleep(1);
     $timeBox->cut('node1');
     usleep(200);
     $timeBox->cut('node2');
