@@ -29,7 +29,8 @@ class Box {
      * @param $cutName
      */
     public function cut($cutName) {
-        $time                    = microtime(true) * 1000;
+        $time = $this->preCutTime = microtime(true) * 1000;
+
         $this->cutInfo[$cutName] = [
             'total_time' => intval($time - $this->start),
             'node_time'  => intval($time - $this->preCutTime)
